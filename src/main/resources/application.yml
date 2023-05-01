@@ -2,7 +2,7 @@ spring:
   liquibase:
     enabled: true
   datasource:
-    url: jdbc:postgresql://localhost:5432/tododb
+    url: ${DB_URL}
     username: ${DB_USERNAME}
     password: ${DB_PASSWORD}
   jpa:
