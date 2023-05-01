@@ -1,0 +1,19 @@
+databaseChangeLog:
+  - changeSet:
+      id: add-todos
+      author: Nick
+      changes:
+        - insert:
+            tableName: todos
+            columns:
+              - column:
+                  name: description
+                  value: "first"
+              - column:
+                  name: is_active
+                  type: bool
+                  value: false
+              - column:
+                  name: created_date
+                  type: timestamp
+                  value: "2016-06-22 19:10:25-07"

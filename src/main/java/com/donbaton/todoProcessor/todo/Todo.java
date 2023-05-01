@@ -3,33 +3,15 @@ package com.donbaton.todoProcessor.todo;
 import jakarta.persistence.*;
 import lombok.Data;
 
-import java.time.LocalDate;
+import java.time.LocalDateTime;
 
 @Table(name = "todos")
 @Entity
 @Data
 public class Todo {
-    @Id
-    @GeneratedValue(strategy = GenerationType.AUTO)
-    private Long id;
+    @Id @GeneratedValue(strategy = GenerationType.IDENTITY)
+    private long id;
     private String description;
-    private LocalDate createDate;
-    private boolean isDone;
-
-    public Todo() {
-    }
-
-    public Todo(Long id, String description, LocalDate createDate, boolean isDone) {
-        this.id = id;
-        this.description = description;
-        this.createDate = createDate;
-        this.isDone = isDone;
-    }
-
-    public Todo(String description, LocalDate createDate, boolean isDone) {
-        this.description = description;
-        this.createDate = createDate;
-        this.isDone = isDone;
-    }
-
+    private boolean isActive;
+    private LocalDateTime created_date;
 }
