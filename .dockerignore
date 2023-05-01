@@ -1,0 +1,7 @@
+.idea
+.mvn
+.git
+.gitignore
+.dockerignore
+.target
+.env
